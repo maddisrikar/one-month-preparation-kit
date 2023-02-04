@@ -1,0 +1,24 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Result {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in); 
+        int n ;
+        int d1= 0 ; int d2= 0;
+        n=Integer.parseInt(in.nextLine());
+        for(int i =0;i<n;i++){
+            String str[] = in.nextLine().split(" ");
+            d1= d1+Integer.parseInt(str[i]);
+            d2= d2+Integer.parseInt(str[n-1-i]);
+        }
+        int diagDiff= Math.abs(d1-d2);        
+        System.out.println(diagDiff);
+    }    
+}

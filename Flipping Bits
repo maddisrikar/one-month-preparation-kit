@@ -1,0 +1,21 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Result {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt();
+        long mask = (1L << 32) - 1;
+        for (int t = 0; t < T; t++) {
+            long n = scanner.nextLong();
+            System.out.println(n ^ mask);            
+        }  
+        scanner.close();
+    }
+}
